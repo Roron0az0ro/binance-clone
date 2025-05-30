@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Binance Responsive UI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo"><strong>Binance</strong> Clone</div>
+    <button class="toggle-dark" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    <!-- Mobile Controls -->
+    <div class="mobile-controls">
+      <button class="menu-toggle" onclick="toggleMenu('actionMenu')">☰ Actions</button>
+      <button class="menu-toggle" onclick="toggleMenu('tabMenu')">☰ Tabs</button>
+    </div>
+
+    <!-- Menus (desktop-visible, collapsible on mobile) -->
+    <div class="header-menus">
+      <div id="actionMenu" class="actions">
+        <button class="action-btn">Referral</button>
+        <button class="action-btn">Megadrop</button>
+        <button class="action-btn">Deposit</button>
+        <button class="action-btn">Earn</button>
+        <button class="action-btn">Chat</button>
+        <button class="action-btn">Rewards</button>
+        <button class="action-btn">More</button>
+      </div>
+
+      <div id="tabMenu" class="tabs">
+        <button class="tab-btn">Favorites</button>
+        <button class="tab-btn">Hot</button>
+        <button class="tab-btn">Alpha</button>
+        <button class="tab-btn">New</button>
+        <button class="tab-btn">Gainers</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="balance">
+    <p>Est. Total Value (USDT): <strong>0.0545355</strong></p>
+  </section>
+
+  <!-- Market Table -->
+  <table class="market-table">
+    <thead>
+      <tr>
+        <th>Pair</th>
+        <th>Last Price</th>
+        <th>Change</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>TON/USDT</td>
+        <td>$3.31</td>
+        <td class="negative">-0.84%</td>
+      </tr>
+      <tr>
+        <td>NOT/USDT</td>
+        <td>$0.002471</td>
+        <td class="negative">-12.19%</td>
+      </tr>
+      <tr>
+        <td>NEIRO/USDT</td>
+        <td>$0.00046304</td>
+        <td class="negative">-13.70%</td>
+      </tr>
+      <tr>
+        <td>BTC/USDT</td>
+        <td>$105,809.53</td>
+        <td class="negative">-2.71%</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Live Chart Section -->
+  <section class="chart-section">
+    <h2>Live BTC/USDT Chart</h2>
+    <div class="chart-wrapper">
+      <iframe
+        src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_52cd4&symbol=BINANCE:BTCUSDT&interval=1&hidesidetoolbar=1&symboledit=1&saveimage=1&toolbarbg=f1f3f6&studies=[]&theme=light&style=1&timezone=Etc/UTC&studies_overrides={}&enabled_features=[]&disabled_features=[]&locale=en"
+        width="100%"
+        height="400"
+        frameborder="0"
+        allowtransparency="true"
+        scrolling="no">
+      </iframe>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
